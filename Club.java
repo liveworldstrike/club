@@ -82,8 +82,9 @@ public class Club
             while (it.hasNext()) {
                 Membership miembro = it.next();
                 if (miembro.getMonth() == month && miembro.getYear() == year) {
-                    miembros.remove(miembro);
                     dadosDeBaja.add(miembro);
+                    it.remove();
+                    
                 }
             }
         }
